@@ -5,7 +5,7 @@ function App() {
   let [value, setValue] = useState("No value");
   React.useEffect(() => {
     fetch("/api").then(res => res.json()).then(
-      value => setValue(value.value.id)
+      value => setValue(value.title)
     ).catch(console.error)
   }, []);
 
